@@ -1,6 +1,6 @@
-﻿namespace BatailleNavale
+﻿namespace BatailleNavaleWPF
 {
-    class Case
+    public class Case
     {
         public Position Position { get; set;  }
 

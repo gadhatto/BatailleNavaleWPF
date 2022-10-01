@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BatailleNavale
+namespace BatailleNavaleWPF
 {
     class Grille
     {
@@ -29,20 +29,25 @@ namespace BatailleNavale
             Matrice = new Matrice2D(NbLignes, NbColonnes) { IndexDepart = 1 };
 
             // On place les navires pour un début de partie
-            PlacerNavire(TypeNavire.SousMarin);
-            PlacerNavire(TypeNavire.SousMarin);
-            PlacerNavire(TypeNavire.Destroyer);
-            PlacerNavire(TypeNavire.Destroyer);
-            PlacerNavire(TypeNavire.Cuirasse);
-            PlacerNavire(TypeNavire.Patrouilleur);
-            PlacerNavire(TypeNavire.PorteAvions);
+            Case[] cases1 = TrouverPlace(1);
+            new SousMarin(cases1);
+            new SousMarin(cases1);
+            Case[] cases2 = TrouverPlace(2);
+            new Destroyer(cases2);
+            new Destroyer(cases2);
+            Case[] cases3 = TrouverPlace(4);
+            new Cuirasse(cases3);
+            Case[] cases4 = TrouverPlace(3);
+            new Patrouilleur(cases4);
+            Case[] cases5 = TrouverPlace(5);
+            new PorteAvions(cases5);
         }
 
-        private void PlacerNavire(TypeNavire typeNavire)
-        {
-            Case[] cases = TrouverPlace((int)typeNavire);
-            new Navire(typeNavire, cases);
-        }
+        //private void PlacerNavire(TypeNavire typeNavire)
+        //{
+        //    Case[] cases = TrouverPlace((int)typeNavire);
+        //    new Navire(typeNavire, cases);
+        //}
 
         // Trouve une place vide au hasard pour le nombre de cases demandé (la méthode assume qu'il y a de la place)
         private Case[] TrouverPlace(int nbCases)
@@ -144,21 +149,21 @@ namespace BatailleNavale
                     if (GetNavire(i, j, out Navire navire))
                     {
                         char type = ' ';
-                        switch (navire.Type)
+                        switch (navire.typeNavire)
                         {
-                            case TypeNavire.Cuirasse:
+                            case "Cuirasse":
                                 type = 'C';
                                 break;
-                            case TypeNavire.Destroyer:
+                            case "Destroyer":
                                 type = 'D';
                                 break;
-                            case TypeNavire.Patrouilleur:
+                            case "Patrouilleur":
                                 type = 'P';
                                 break;
-                            case TypeNavire.PorteAvions:
+                            case "PorteAvions":
                                 type = 'A';
                                 break;
-                            case TypeNavire.SousMarin:
+                            case "SousMarin":
                                 type = 'S';
                                 break;
                         }

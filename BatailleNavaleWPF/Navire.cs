@@ -1,17 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BatailleNavale
+namespace BatailleNavaleWPF
 {
-    class Navire
+    public class Navire:INavire
     {
-        public TypeNavire Type { get; }
+        public string typeNavire { get; }
         public bool Coule { get => EstCoule(); }
 
         private readonly Case[] cases;
 
-        public Navire (TypeNavire type, Case[] carres)
+        public Navire(string typeNavire, Case[] carres)
         {
-            Type = type;
+            this.typeNavire = typeNavire;
             cases = carres;
 
             foreach (Case carre in cases)
@@ -20,7 +24,7 @@ namespace BatailleNavale
             }
         }
 
-        private bool EstCoule()
+        public bool EstCoule()
         {
             foreach (Case carre in cases)
             {
@@ -29,4 +33,5 @@ namespace BatailleNavale
             return true;
         }
     }
+
 }

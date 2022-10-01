@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BatailleNavale
+namespace BatailleNavaleWPF
 {
-    class Position
+    public class Position
     {
         public int Ligne { get; }
         public int Colonne { get; }

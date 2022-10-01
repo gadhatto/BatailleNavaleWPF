@@ -55,8 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Cuirasse.cs" />
+    <Compile Include="Destroyer.cs" />
+    <Compile Include="INavire.cs" />
     <Compile Include="Matrice2D.cs" />
-    <Compile Include="TypeNavire.cs" />
+    <Compile Include="Navire.cs" />
+    <Compile Include="Patrouilleur.cs" />
+    <Compile Include="PorteAvions.cs" />
+    <Compile Include="SousMarin.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,7 +79,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Navire.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
