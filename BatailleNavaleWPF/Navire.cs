@@ -4,7 +4,12 @@ namespace BatailleNavale
 {
     class Navire
     {
+<<<<<<< Updated upstream
         public TypeNavire Type { get; }
+=======
+        //Declaration de variable
+        public string typeNavire { get; }
+>>>>>>> Stashed changes
         public bool Coule { get => EstCoule(); }
 
         private readonly Case[] cases;
