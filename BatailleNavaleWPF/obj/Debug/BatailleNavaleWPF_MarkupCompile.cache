@@ -4,17 +4,25 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\BAH Mamadou\source\repos\BatailleNavaleWPF\BatailleNavaleWPF\obj\Debug\
+=======
+C:\Users\BAH Mamadou\Documents\Bloc2\Developpement informatique\BatailleNavaleWPF\BatailleNavaleWPF\obj\Debug\
+>>>>>>> d9121e3cc7be4c9e9f26c0d7e32c3860360e996b
 BatailleNavaleWPF
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\BAH Mamadou\source\repos\BatailleNavaleWPF\BatailleNavaleWPF\App.xaml
+=======
+C:\Users\BAH Mamadou\Documents\Bloc2\Developpement informatique\BatailleNavaleWPF\BatailleNavaleWPF\App.xaml
+>>>>>>> d9121e3cc7be4c9e9f26c0d7e32c3860360e996b
 1219584333
 
 11885886144
 13-1310406943
 MainWindow.xaml;
 
-True
+False
 
